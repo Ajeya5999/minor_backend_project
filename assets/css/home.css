@@ -1,0 +1,63 @@
+/* Home Heading */
+
+h1 {
+    width: 100%;
+    color: var(--primary-theme-color);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* Home To Do Form */
+
+#to-do-form {
+    display: flex;
+    flex-wrap: wrap;
+    --form-content-height: 10vh;
+}
+
+/* #to-do-form > div {
+    display: flex;
+    justify-content: center;
+} */
+
+#to-do-form > div > label {
+    display: block;
+}
+
+.to-do-form-input {
+    width: 100%;
+    height: var(--form-content-height);
+    border-width: 0;
+    resize: none;
+}
+
+/* Description Container */
+
+#description-container {
+    width: 100%;
+    flex-grow: 2;
+}
+
+/* Category Container */
+
+#category-container {
+    width: 50%;
+    flex-grow: 1;
+}
+
+/* Due Date Container */
+
+#due-date-container {
+    width: 50%;
+    flex-grow: 1;
+}
+
+/* Submission Buttons */
+
+#submit-buttons-container {
+    width: 100%;
+    height: var(--form-content-height);
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-around;
+}

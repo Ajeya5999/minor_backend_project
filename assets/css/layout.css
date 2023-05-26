@@ -1,0 +1,31 @@
+/* General Properties */
+
+:root {
+    --primary-theme-color: #e05951;
+    --secondary-theme-color: white;
+    --panel-height: 15vh;
+}
+
+body {
+    min-width: 320px;
+    min-height: 720px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-theme-color);
+}
+
+div{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.whitespace {
+    width: 100%;
+}
+
+/* Layout Properties */
+
+#header-space {
+    height: var(--panel-height);
+}

@@ -1,1 +1,44 @@
-<h1>Hello World</h1>
+<!-- Home Style -->
+
+<link rel="stylesheet" href="/css/home.css">
+
+<!-- Home Heading -->
+
+<h1>Ready to get stuff done, (Username)?</h1>
+
+<!-- Home To Do Form -->
+
+<form id="to-do-form">
+
+    <!-- Description Container -->
+
+    <div id="description-container">
+        <label for="description">description</label>
+        <textarea class="to-do-form-input" id="description" name="description" placeholder="What do you needs to do?"></textarea>
+    </div>
+
+    <!-- Category Container -->
+
+    <div id="category-container">
+        <label for="category">category</label>
+        <select class="to-do-form-input" id="category" name="category">
+
+        </select>
+    </div>
+
+    <!-- Due Date Container -->
+
+    <div id="due-date-container">
+        <label for="due-date">due date</label>
+        <input class="to-do-form-input" type="date" id="due-date" name="due-date">
+    </div>
+
+    <!-- Submission Buttons -->
+
+    <div id="submit-buttons-container">
+        <button type="submit">Add Task</button>
+        <button type="submit">Delete Tasks</button>
+        <button type="submit">Done</button>
+    </div>
+
+</form>

@@ -1,0 +1,56 @@
+/* header */
+
+header {
+    background-color: var(--primary-theme-color);
+    color: var(--secondary-theme-color);
+    width: 100%;
+    height: var(--panel-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    z-index: 1;
+}
+
+header a {
+    color: var(--secondary-theme-color);
+    text-decoration: none;
+}
+
+/* Site Logo */
+
+#site-logo {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+#site-logo-container {
+    background-color: white;
+    width: 30%;
+    border-radius: 50%;
+    margin-right: 3%;
+}
+
+#site-logo-container img {
+    max-width: 100%;
+}
+
+#site-name {
+    max-width: 67%;
+}
+
+/* Site Options */
+
+#site-options {
+    width: 12%;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,8 +1,19 @@
 <html>
     <head>
-        <title><%= title %></title>
+        <title>Your To-Do List | <%= title %></title>
+        <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <%- style %>
     </head>
     <body>
-        <%- body %>
+        <%- include('_header'); -%>
+
+        <div class="whitespace" id="header-space"></div>
+
+        <main id="layout-main">
+            <%- body -%>
+        </main>
+        <%- include('_footer'); -%>
+        <%- script %>
     </body>
 </html>
