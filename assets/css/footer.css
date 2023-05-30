@@ -1,0 +1,6 @@
+/* Footer */
+
+footer {
+    background-color: var(--primary-theme-color);
+    color: var(--secondary-theme-color);
+}

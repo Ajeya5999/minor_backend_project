@@ -3,15 +3,16 @@
 :root {
     --primary-theme-color: #e05951;
     --secondary-theme-color: white;
+    --tertiary-theme-color: #4a4a4a;
     --panel-height: 15vh;
 }
 
 body {
     min-width: 320px;
-    min-height: 720px;
     margin: 0;
     padding: 0;
     background-color: var(--secondary-theme-color);
+    font-family: sans-serif;
 }
 
 div{
@@ -28,4 +29,8 @@ div{
 
 #header-space {
     height: var(--panel-height);
+}
+
+main {
+    min-height: 493px;
 }

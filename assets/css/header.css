@@ -10,7 +10,6 @@ header {
     left: 0;
     display: flex;
     justify-content: space-between;
-    font-family: sans-serif;
     z-index: 1;
 }
 

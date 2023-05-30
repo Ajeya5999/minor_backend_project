@@ -3,7 +3,6 @@
 h1 {
     width: 100%;
     color: var(--primary-theme-color);
-    font-family: sans-serif;
     text-align: center;
 }
 
@@ -15,13 +14,17 @@ h1 {
     --form-content-height: 10vh;
 }
 
-/* #to-do-form > div {
-    display: flex;
-    justify-content: center;
-} */
+#to-do-form > div {
+    padding: 1% 3%;
+    border: solid #e0e0e0 1px;
+    box-sizing: border-box;
+}
 
 #to-do-form > div > label {
     display: block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--tertiary-theme-color);
 }
 
 .to-do-form-input {
@@ -57,7 +60,29 @@ h1 {
 #submit-buttons-container {
     width: 100%;
     height: var(--form-content-height);
+    padding: 0 12%;
     flex-grow: 2;
     display: flex;
     justify-content: space-around;
+}
+
+#submit-buttons-container > button {
+    width: 20%;
+    border: solid black 1px;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: var(--secondary-theme-color);
+    font-size: 1rem;
+}
+
+#add-task {
+    background-color: #4a4a4a;
+}
+
+#delete-tasks {
+    background-color: var(--primary-theme-color);
+}
+
+#done {
+    background-color: #0052FF;
 }

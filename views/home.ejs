@@ -14,14 +14,14 @@
 
     <div id="description-container">
         <label for="description">description</label>
-        <textarea class="to-do-form-input" id="description" name="description" placeholder="What do you needs to do?"></textarea>
+        <textarea class="to-do-form-input" id="description" name="description" placeholder="What do you needs to do?" required></textarea>
     </div>
 
     <!-- Category Container -->
 
     <div id="category-container">
         <label for="category">category</label>
-        <select class="to-do-form-input" id="category" name="category">
+        <select class="to-do-form-input" id="category" name="category" required>
 
         </select>
     </div>
@@ -30,15 +30,24 @@
 
     <div id="due-date-container">
         <label for="due-date">due date</label>
-        <input class="to-do-form-input" type="date" id="due-date" name="due-date">
+        <input class="to-do-form-input" type="date" id="due-date" name="due-date" required>
     </div>
 
     <!-- Submission Buttons -->
 
     <div id="submit-buttons-container">
-        <button type="submit">Add Task</button>
-        <button type="submit">Delete Tasks</button>
-        <button type="submit">Done</button>
+        <button type="submit" id="add-task">
+            <i class="fa-sharp fa-solid fa-plus"></i>
+            Add Task
+        </button>
+        <button type="submit" id="delete-tasks">
+            <i class="fa-solid fa-trash"></i>
+            Delete Tasks
+        </button>
+        <button type="submit" id="done">
+            <i class="fa-solid fa-circle-check"></i>
+            Done
+        </button>
     </div>
 
 </form>
