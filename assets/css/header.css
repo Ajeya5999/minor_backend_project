@@ -20,8 +20,12 @@ header a {
 
 /* Site Logo */
 
-#site-logo {
+#home-button {
     width: 30%;
+}
+
+#site-logo {
+    width: 100%;
     display: flex;
     align-items: center;
     font-size: 0.9rem;
