@@ -8,6 +8,10 @@ const port = 8000;
 
 const expressLayouts = require('express-ejs-layouts');
 
+// Setting up Database
+
+const db = require('./config/mongoose');
+
 //Using Layouts and seeting up our assets directory to be served
 
 app.use(expressLayouts);
@@ -19,6 +23,10 @@ app.set('layout extractScripts', true);
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+//For sending Data to the server
+
+app.use(express.urlencoded());
 
 //Setting up routes
 
