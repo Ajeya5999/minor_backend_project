@@ -12,6 +12,12 @@ const expressLayouts = require('express-ejs-layouts');
 
 const db = require('./config/mongoose');
 
+// Using Express Sessions, Middlewares and mongoStore for Sessions
+
+const session = require('express-session');
+const mongoStore = require('connect-mongodb-session')(session);
+const authentication = require('./config/authentication');
+
 //Using Layouts and seeting up our assets directory to be served
 
 app.use(expressLayouts);
@@ -27,6 +33,25 @@ app.set('views', './views');
 //For sending Data to the server
 
 app.use(express.urlencoded());
+
+// Setting up Express Session
+
+app.use(session({
+    secret: "abc",
+    resave: false,
+    saveUninitialized: false,
+    store: new mongoStore({ 
+        uri: 'mongodb://localhost/to_do_list',
+        collection: 'sessions'
+    }),
+
+    // Cookie Options
+    cookie: {
+        maxAge: 30 * 60 * 1000 // 30 minutes
+    }
+    
+}));
+app.use(authentication.setAuthenticatedUser);
 
 //Setting up routes
 

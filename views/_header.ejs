@@ -12,10 +12,15 @@
     </a>
 
     <!-- Site Options -->
-
+   
     <div id="site-options">
-        <a href="/user/sign-up">Sign-Up</a> |
-        <a href="/user/sign-in">Sign-In</a>
+        <% if (!locals.user) { %>
+            <a href="/user/sign-up">Sign-Up</a> |
+            <a href="/user/sign-in">Sign-In</a>
+        <% } else { %>
+            <a href="/user/profile"><%= locals.user.name %></a> |
+            <a href="/user/destroy-session">logout</a> 
+        <% } %>
     </div>
     
 </header>
