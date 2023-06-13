@@ -1,0 +1,17 @@
+/* Not Found Message */
+
+h1 {
+    width: 100%;
+    color: var(--primary-theme-color);
+    text-align: center;
+}
+
+/* Container */
+
+#not-found-container {
+    height: 83%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

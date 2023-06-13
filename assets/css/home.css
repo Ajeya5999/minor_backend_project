@@ -86,3 +86,12 @@ h1 {
 #done {
     background-color: #0052FF;
 }
+
+/* Unauth container */
+
+#unauth-container {
+    height: 83%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

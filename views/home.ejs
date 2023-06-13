@@ -2,52 +2,62 @@
 
 <link rel="stylesheet" href="/css/home.css">
 
-<!-- Home Heading -->
+<% if(locals.user) { %> <!-- Only show when user is signed in -->
 
-<h1>Ready to get stuff done, (Username)?</h1>
+    <!-- Home Heading -->
 
-<!-- Home To Do Form -->
+    <h1>Ready to get stuff done, <%= locals.user.name %>?</h1>
 
-<form id="to-do-form">
+    <!-- Home To Do Form -->
 
-    <!-- Description Container -->
+    <form id="to-do-form">
 
-    <div id="description-container">
-        <label for="description">description</label>
-        <textarea class="to-do-form-input" id="description" name="description" placeholder="What do you needs to do?" required></textarea>
+        <!-- Description Container -->
+
+        <div id="description-container">
+            <label for="description">description</label>
+            <textarea class="to-do-form-input" id="description" name="description" placeholder="What do you needs to do?" required></textarea>
+        </div>
+
+        <!-- Category Container -->
+
+        <div id="category-container">
+            <label for="category">category</label>
+            <select class="to-do-form-input" id="category" name="category" required>
+
+            </select>
+        </div>
+
+        <!-- Due Date Container -->
+
+        <div id="due-date-container">
+            <label for="due-date">due date</label>
+            <input class="to-do-form-input" type="date" id="due-date" name="due-date" required>
+        </div>
+
+        <!-- Submission Buttons -->
+
+        <div id="submit-buttons-container">
+            <button type="submit" id="add-task">
+                <i class="fa-sharp fa-solid fa-plus"></i>
+                Add Task
+            </button>
+            <button type="submit" id="delete-tasks">
+                <i class="fa-solid fa-trash"></i>
+                Delete Tasks
+            </button>
+            <button type="submit" id="done">
+                <i class="fa-solid fa-circle-check"></i>
+                Done
+            </button>
+        </div>
+
+    </form>
+
+<% } else { %> <!-- Tell user to sign in -->
+ 
+    <div id="unauth-container">
+        <h1>Please Sign in to Continue</h1>
     </div>
 
-    <!-- Category Container -->
-
-    <div id="category-container">
-        <label for="category">category</label>
-        <select class="to-do-form-input" id="category" name="category" required>
-
-        </select>
-    </div>
-
-    <!-- Due Date Container -->
-
-    <div id="due-date-container">
-        <label for="due-date">due date</label>
-        <input class="to-do-form-input" type="date" id="due-date" name="due-date" required>
-    </div>
-
-    <!-- Submission Buttons -->
-
-    <div id="submit-buttons-container">
-        <button type="submit" id="add-task">
-            <i class="fa-sharp fa-solid fa-plus"></i>
-            Add Task
-        </button>
-        <button type="submit" id="delete-tasks">
-            <i class="fa-solid fa-trash"></i>
-            Delete Tasks
-        </button>
-        <button type="submit" id="done">
-            <i class="fa-solid fa-circle-check"></i>
-            Done
-        </button>
-    </div>
-
-</form>
+<% } %>
