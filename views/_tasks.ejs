@@ -1,0 +1,30 @@
+<div id="tasks-container">
+    <% for(task of tasks) { %>
+        <div class="task-container">
+            <input type="checkbox">
+            <div class="info-container">
+                <h3><%= task.description %></h3>
+                <span>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <%= task.dueDate %>
+                </span>
+                <div class="category-container">
+                    <%= task.category %>
+                </div>
+            </div>
+        </div>
+        <div class="task-container">
+            <input type="checkbox">
+            <div class="info-container">
+                <h3><%= task.description %></h3>
+                <span>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <%= task.dueDate %>
+                </span>
+                <div class="category-container">
+                    <%= task.category %>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</div>

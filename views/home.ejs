@@ -10,7 +10,7 @@
 
     <!-- Home To Do Form -->
 
-    <form id="to-do-form">
+    <form id="to-do-form" action="/task/create" method="post">
 
         <!-- Description Container -->
 
@@ -24,7 +24,10 @@
         <div id="category-container">
             <label for="category">category</label>
             <select class="to-do-form-input" id="category" name="category" required>
-
+                <option value="School">School</option>
+                <option value="Work">Work</option>
+                <option value="Excercise">Excercise</option>
+                <option value="Home">Home</option>
             </select>
         </div>
 
@@ -32,7 +35,7 @@
 
         <div id="due-date-container">
             <label for="due-date">due date</label>
-            <input class="to-do-form-input" type="date" id="due-date" name="due-date" required>
+            <input class="to-do-form-input" type="date" id="due-date" name="dueDate" required>
         </div>
 
         <!-- Submission Buttons -->
@@ -42,15 +45,17 @@
                 <i class="fa-sharp fa-solid fa-plus"></i>
                 Add Task
             </button>
-            <button type="submit" id="delete-tasks">
+            <button type="submit" id="delete-tasks" formaction="/asdasd">
                 <i class="fa-solid fa-trash"></i>
                 Delete Tasks
             </button>
-            <button type="submit" id="done">
+            <button type="submit" id="done" formaction="/asdasd">
                 <i class="fa-solid fa-circle-check"></i>
                 Done
             </button>
         </div>
+
+        <%- include('_tasks'); -%>
 
     </form>
 
