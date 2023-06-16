@@ -10,20 +10,20 @@
 
     <!-- Home To Do Form -->
 
-    <form id="to-do-form" action="/task/create" method="post">
+    <form id="add-task-form" action="/task/create" method="post">
 
         <!-- Description Container -->
 
         <div id="description-container">
             <label for="description">description</label>
-            <textarea class="to-do-form-input" id="description" name="description" placeholder="What do you needs to do?" required></textarea>
+            <textarea class="add-task-form-input" id="description" name="description" placeholder="What do you needs to do?" required></textarea>
         </div>
 
         <!-- Category Container -->
 
         <div id="category-container">
             <label for="category">category</label>
-            <select class="to-do-form-input" id="category" name="category" required>
+            <select class="add-task-form-input" id="category" name="category" required>
                 <option value="School">School</option>
                 <option value="Work">Work</option>
                 <option value="Excercise">Excercise</option>
@@ -35,28 +35,34 @@
 
         <div id="due-date-container">
             <label for="due-date">due date</label>
-            <input class="to-do-form-input" type="date" id="due-date" name="dueDate" required>
+            <input class="add-task-form-input" type="date" id="due-date" name="dueDate" required>
         </div>
 
-        <!-- Submission Buttons -->
+    </form>
 
-        <div id="submit-buttons-container">
-            <button type="submit" id="add-task">
-                <i class="fa-sharp fa-solid fa-plus"></i>
-                Add Task
-            </button>
-            <button type="submit" id="delete-tasks" formaction="/asdasd">
-                <i class="fa-solid fa-trash"></i>
-                Delete Tasks
-            </button>
-            <button type="submit" id="done" formaction="/asdasd">
-                <i class="fa-solid fa-circle-check"></i>
-                Done
-            </button>
-        </div>
+    <!-- Submission Buttons -->
+
+    <div id="submit-buttons-container">
+        <button type="submit" id="add-task" form="add-task-form">
+            <i class="fa-sharp fa-solid fa-plus"></i>
+            Add Task
+        </button>
+        <button type="submit" id="delete-tasks" form="tasks-list">
+            <i class="fa-solid fa-trash"></i>
+            Delete Tasks
+        </button>
+        <button type="submit" id="done" form="tasks-list" formaction="/task/mark">
+            <i class="fa-solid fa-circle-check"></i>
+            Done
+        </button>
+    </div>
+
+    <!-- Tasks Container Form -->
+
+    <form id="tasks-list" action="/task/remove" method="post">
 
         <%- include('_tasks'); -%>
-
+        
     </form>
 
 <% } else { %> <!-- Tell user to sign in -->

@@ -19,3 +19,37 @@ module.exports.create = async function(req, res) {
         return res.redirect('/');
     }
 }
+
+// For Deleting Tasks 
+
+module.exports.remove = async function(req, res) {
+    if(req.body.tasks) {
+        for(task of req.body.tasks) {
+            try {
+                await Task.findByIdAndDelete(task);
+            } catch(err) {
+                console.log(err);
+                res.redirect('back');
+            }
+        }
+    }
+    console.log("deleted successfully");
+    res.redirect('/');
+}
+
+// For Making as Done 
+
+module.exports.mark = async function(req, res) {
+    if(req.body.tasks) {
+        for(task of req.body.tasks) {
+            try {
+                await Task.findByIdAndUpdate(task, {done: true});
+            } catch(err) {
+                console.log(err);
+                res.redirect('back');
+            }
+        }
+    }
+    console.log("marked successfully");
+    res.redirect('/');
+}

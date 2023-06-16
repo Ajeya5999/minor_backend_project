@@ -8,28 +8,27 @@ h1 {
 
 /* Home To Do Form */
 
-#to-do-form {
+#add-task-form {
     display: flex;
     flex-wrap: wrap;
-    --form-content-height: 10vh;
 }
 
-#to-do-form > div {
+#add-task-form > div {
     padding: 1% 3%;
     border: solid #e0e0e0 1px;
     box-sizing: border-box;
 }
 
-#to-do-form > div > label {
+#add-task-form > div > label {
     display: block;
     text-transform: uppercase;
     font-size: 0.8rem;
     color: var(--tertiary-theme-color);
 }
 
-.to-do-form-input {
+.add-task-form-input {
     width: 100%;
-    height: var(--form-content-height);
+    height: 10vh;
     border-width: 0;
     resize: none;
 }
@@ -59,9 +58,7 @@ h1 {
 
 #submit-buttons-container {
     width: 100%;
-    height: var(--form-content-height);
-    padding: 0 12%;
-    flex-grow: 2;
+    height: 10vh;
     display: flex;
     justify-content: space-around;
 }
