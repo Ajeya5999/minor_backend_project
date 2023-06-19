@@ -15,7 +15,6 @@ module.exports.home = async function(req, res) {
     } catch(err) {
         console.log("error", err);
     }
-
 };
 
 //Not Found

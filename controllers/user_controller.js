@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const Task = require('../models/task');
 
 //For Sign-In Page
 
@@ -18,10 +19,19 @@ module.exports.signUp = function(req, res) {
 
 // For User-Profile Page
 
-module.exports.userProfile = function(req, res) {
-    return res.render('user_profile', {
-        title: "User Profile"
-    });
+module.exports.userProfile = async function(req, res) {
+    try {
+        var tasks = [];
+        if(req.session.user) {
+            tasks = await Task.find({email: req.session.user.email}).exec();
+        }
+        return res.render('user_profile', {
+            title: "User Profile",
+            tasks: tasks
+        });
+    } catch(err) {
+        console.log("error", err);
+    }
 }
 
 //For Signing Up / Creating a User
@@ -70,6 +80,8 @@ module.exports.createSession = async function(req, res) {
         return res.redirect('back');
     }
 }
+
+// For Loging Out
 
 module.exports.destroySession = function(req, res) {
     if(req.session.isAuth) {

@@ -1,6 +1,25 @@
-/* Tasks Style */
+/* User Info Style */
 
-#tasks-container {
+#user-info-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    margin-top: 25px;
+}
+
+/* Tasks Done Header */
+
+h1 {
+    width: 100%;
+    color: var(--primary-theme-color);
+    text-align: center;
+    margin-top: 45px;
+}
+
+/* Tasks Done Style */
+
+#tasks-done-container {
     width: 100%;
     margin-top: 20px;
 }

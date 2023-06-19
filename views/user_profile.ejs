@@ -1,2 +1,35 @@
-Name: (name)
-Email: (Email)
+<!-- User Profile Style -->
+
+<link rel="stylesheet" href="/css/user_profile.css">
+
+<!-- User Info -->
+
+<div id="user-info-container">
+    <span>Name: <%= locals.user.name %></span> 
+    <span>Email: <%= locals.user.email %></span>
+</div>
+
+<!-- Tasks User has Done -->
+
+<h1>Tasks Done!</h1>
+
+<div id="tasks-done-container">
+    <% for(task of tasks) { %>
+        <% if(task.done) { %>
+            <div class="task-container">
+                <div class="info-container">
+                    <h3><%= task.description %></h3>
+                    <span>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <%= task.dueDate %>
+                    </span>
+                </div>
+                <div class="category-container <%= task.category %>">
+                    <span>
+                        <%= task.category %>
+                    </span>
+                </div>
+            </div>
+        <% } %>
+    <% } %>
+</div>
