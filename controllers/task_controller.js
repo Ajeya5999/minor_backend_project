@@ -23,6 +23,9 @@ module.exports.create = async function(req, res) {
 // For Deleting Tasks 
 
 module.exports.remove = async function(req, res) {
+    if(!Array.isArray(req.body.tasks)) { 
+        req.body.tasks = [req.body.tasks];
+    }
     if(req.body.tasks) {
         for(task of req.body.tasks) {
             try {
@@ -40,6 +43,9 @@ module.exports.remove = async function(req, res) {
 // For Making as Done 
 
 module.exports.mark = async function(req, res) {
+    if(!Array.isArray(req.body.tasks)) { 
+        req.body.tasks = [req.body.tasks];
+    }
     if(req.body.tasks) {
         for(task of req.body.tasks) {
             try {
